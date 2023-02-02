@@ -1,0 +1,13 @@
+version: "3"
+services:
+  wpp:
+    image: wpp:latest
+    environment:
+      - WPP_USER=example-user
+      - WPP_PASSWORD=my_cool_secret
+      - WPP_ROOT_PASSWORD=my-secret-pw
+      - WPP_DATABASE=wpp
+    ports:
+      - 5000:5000
+    volumes:
+      - ./wpp:/var/lib/mysql
